@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 28%;
+    justify-content: center;
+    position: relative;
+}
+
+main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 24px 0;
+}
+
+/* !Input fields styling */
+.input-field {
+    display: flex;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    border-radius: 14px;
+    margin: 14px;
+}
+
+.input-field #text_input {
+    flex-grow: 1;
+    border: none;
+    border-radius: 14px 0px 0px 14px;
+    padding: 14px;
+    font-size: medium;
+    outline: none;
+}
+
+.input-field #add_input {
+    border: none;
+    border-radius: 0px 14px 14px 0px;
+    padding: 14px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.input-field #add_input:hover {
+    background-color: gray;
+    color: white;
+}
+
+/* !List container styling */
+.container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    list-style-type: none;
+    padding: 14px;
+
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.container .list {
+    display: flex;
+    padding: 18px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    border-radius: 14px;
+    background-color: white;
+}
+
+/* ?Content styling */
+.list .content {
+    flex-grow: 1;
+    padding-right: 10px;
+}
+
+.content .date {
+    color: gray;
+    font-size: small;
+    padding-bottom: 4px;
+}
+
+.content .text {
+    font-size: medium;
+    text-align: justify;
+}
+
+/* ?Control btns styling */
+.list .control-btns {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.control-btns button {
+    padding: 6px 8px;
+    border: none;
+    background: none;
+    font-size: small;
+    cursor: pointer;
+    opacity: .5;
+    transition: .3s;
+}
+
+.control-btns .delete {
+    color: white;
+    background-color: indianred;
+    border-radius: 8px;
+}
+
+.control-btns button:hover {
+    opacity: 1;
+}
